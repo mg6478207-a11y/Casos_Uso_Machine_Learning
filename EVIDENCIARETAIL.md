@@ -6,6 +6,8 @@ aqui se ve como es el codigo:
 ![Imagen de WhatsApp 2025-09-06 a las 01 04 58_afc044f9](https://github.com/user-attachments/assets/a57d30a7-3c11-4d86-8171-7c63e880c814)
 
 Aqui se evidencia como se ve despues de ejecutarlo: 
+<img width="1366" height="677" alt="image" src="https://github.com/user-attachments/assets/f0019196-efda-473f-9cf8-992671f6c37d" />
+
 ![Imagen de WhatsApp 2025-09-06 a las 01 02 15_0cab8585](https://github.com/user-attachments/assets/1d6315a2-f520-4648-9682-27177d5e7d93)
 ![Imagen de WhatsApp 2025-09-06 a las 01 02 51_9c742d61](https://github.com/user-attachments/assets/4afd1f9a-da18-4f62-ada1-54643ed5e1d9)
 ![Imagen de WhatsApp 2025-09-06 a las 01 03 16_a3d5c690](https://github.com/user-attachments/assets/216e0cf0-7d0c-4603-a6e9-dbad44edbb1c)
