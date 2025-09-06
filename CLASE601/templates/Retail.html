@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning en Retail</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="internal-page">
+
+  <!-- Barra de navegación -->
+  <div class="navbar">
+    <a href="/">🏠 Menú Principal</a>
+    <a href="/Salud">🩺 Salud</a>
+    <a href="/Ciberseguridad">🔒 Ciberseguridad</a>
+    <a href="/Retail">🛒 Retail</a>
+    <a href="/Transporte">🚚 Transporte</a>
+  </div>
+
+  <!-- Sección principal -->
+  <div class="section">
+    <h2>Machine Learning en Retail</h2>
+    <p>
+        En el sector retail se generan millones de transacciones diarias, 
+        lo que dificulta predecir la demanda, gestionar inventarios y personalizar 
+        la experiencia del cliente. Sin herramientas inteligentes, las empresas 
+        enfrentan pérdidas por exceso de stock o falta de productos.
+    </p>
+
+    <!-- Tarjetas que despliegan info -->
+    <div class="cards">
+      <div class="card" onclick="showSection('algoritmos')">
+        <img src="/static/algoritmoS.png" alt="Algoritmos">
+        <h3>Algoritmos</h3>
+        <p>Haz clic para ver más sobre los algoritmos aplicados en Retail.</p>
+      </div>
+
+      <div class="card" onclick="showSection('beneficios')">
+        <img src="/static/beneficiosS.png" alt="Beneficios">
+        <h3>Beneficios</h3>
+        <p>Descubre cómo el Machine Learning mejora la Retail.</p>
+      </div>
+
+      <div class="card" onclick="showSection('ejemplos')">
+        <img src="/static/ejemploS.png" alt="Ejemplos">
+        <h3>Ejemplos</h3>
+        <p>Conoce casos reales de aplicación en el sector Retail.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secciones ocultas -->
+  <div id="algoritmos" class="section-box">
+  <h3>🔹 Algoritmos en Retail</h3>
+  <p>
+    Los principales algoritmos utilizados en este campo son:
+    <ul>
+        <li> Redes Neuronales Recurrentes (RNN): para predecir ventas con base en el historial de datos.</li>
+        <li> Clustering (K-means): para segmentar clientes según su comportamiento de compra.</li>
+        <li> Sistemas de Recomendación: filtrado colaborativo y basado en contenido para sugerir productos.</li>
+    </ul>
+    </div>
+
+    <div id="beneficios" class="section-box">
+    <h3>🌟 Beneficios</h3>
+    <p>
+        La implementación del Machine Learning en Retail ofrece múltiples beneficios:
+        <ul>
+        <li>Inventarios más eficientes y reducción de pérdidas.</li>
+        <li>Incremento en ventas gracias a recomendaciones personalizadas.</li>
+        <li>Mayor fidelización y satisfacción del cliente.</li>
+        </ul>
+    </p>
+    </div>
+
+    <div id="ejemplos" class="section-box">
+    <h3>📌 Ejemplos</h3>
+    <p>
+        Algunas aplicaciones exitosas del Machine Learning en Retail son:
+        <ul>
+        <li><b>Amazon:</b> Usa ML en sus sistemas de recomendación (aportan hasta un 35% de las ventas).</li>
+        <li><b>Walmart:</b> Aplica ML para optimizar inventarios y predecir demanda en tiempo real.</li>
+        <li><b>Sephora:</b> Ofrece recomendaciones de cosméticos personalizadas con IA.</li>
+        </ul>
+    </p>
+    </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section-box').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo({ top: document.getElementById(id).offsetTop - 50, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
