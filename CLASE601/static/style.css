@@ -1,78 +1,96 @@
-/* Menu principal */
-body, html {
+/* ===== Estilos exclusivos del Menú Principal ===== */
+body.main-page {
+    font-family: Arial, sans-serif;
+    background: #c5e1ee;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
+}
+.main-content section {
+    background: #ffffffc4;
+    padding: 20px 25px;
+    border-left: 6px solid #1565c0;  /* franja azul */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.hero {
-    position: relative;
+/* Ajustes al nav solo en main-page */
+body.main-page nav {
     background-image: image('static',filename='fondo.jpeg');
     background: url("/static/fondo.jpeg") no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    padding: 10px;
 }
 
-.overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+body.main-page nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.content {
+body.main-page nav ul li {
     position: relative;
+    display: inline-block;
+}
+
+body.main-page nav ul li a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.main-page nav ul li a:hover {
+    background: #d4d3d359;
+}
+
+body.main-page nav ul ul {
+    display: none;
+    position: absolute;
+    background: #333;
+    min-width: 150px;
     z-index: 1;
-    max-width: 800px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+body.main-page nav ul ul li {
+    display: block;
 }
 
-p {
-    font-size: 1.2rem;
+body.main-page nav ul li:hover ul {
+    display: block;
+}
+
+/* Contenido central */
+.main-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.main-content h1 {
+    text-align: center;
+    color: #1565c0;
     margin-bottom: 30px;
 }
 
-.menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 20px;
-}
-
-.btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    background: rgba(143, 140, 140, 0.349);
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    width: 150px;
-    transition: 0.3s ease;
-}
-
-.btn img {
-    width: 50px;
-    height: 50px;
+.main-content h2 {
+    color: #ff9800;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.btn:hover {
-    background: rgba(12, 11, 11, 0.692);
-    transform: scale(1.05);
+.main-content p, 
+.main-content ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
 }
+
+.main-content ul {
+    padding-left: 20px;
+}
+
 /*-----------------------------------------------------------------------------***/
 /*-------------------salud, Transporte, retail y ciberseguridad-----------------------------------------------------***/
 /*-----------------------------------------------------------------------------***/
@@ -219,4 +237,106 @@ body.internal-page {
 
 .references a:hover {
     text-decoration: underline;
+}
+/* ===== Estilos específicos de LRPractico (no invasivos) ===== */
+
+.lr-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Formulario en grid: 2 campos + botón */
+.lr-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+.lr-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.lr-input-group label {
+    font-weight: bold;
+    color: #1565c0;
+    margin-bottom: 6px;
+}
+
+.lr-input {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #fff;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.lr-input:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.15);
+}
+
+.lr-actions { display: flex; align-items: end; }
+
+.lr-btn {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #1565c0;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(21,101,192,0.25);
+    transition: transform .05s ease, background .2s ease, box-shadow .2s ease;
+}
+.lr-btn:hover { background: #0f5aa3; }
+.lr-btn:active { transform: translateY(1px); }
+
+/* Resultado */
+.lr-result-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.lr-badge {
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+/* Contenedor de la figura */
+.lr-figure {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.lr-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive: apilar formulario */
+@media (max-width: 900px) {
+    .lr-form {
+        grid-template-columns: 1fr;
+    }
+    .lr-actions { justify-content: flex-start; }
 }
