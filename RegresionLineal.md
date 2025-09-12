@@ -33,6 +33,16 @@ Codigo de LRModel.py dentro de Visual Studio
 ![Imagen de WhatsApp 2025-09-12 a las 01 39 35_75746655](https://github.com/user-attachments/assets/ca070c6a-6bd2-4bb3-83c4-2d8250dd19e9)
 ![Imagen de WhatsApp 2025-09-12 a las 01 39 53_00d753dd](https://github.com/user-attachments/assets/dfed6879-b3b9-4dfd-bd31-811b86332ae9)
 
+Codigo de Lrconceptos dentro de visual studio 
+![Imagen de WhatsApp 2025-09-12 a las 01 40 52_d79ba874](https://github.com/user-attachments/assets/4290d95d-bac2-4512-9bb6-4681b78beebb)
+![Imagen de WhatsApp 2025-09-12 a las 01 41 15_6cc7332e](https://github.com/user-attachments/assets/89b16994-f052-4610-ba5a-37c7ea09ed93)
+![Imagen de WhatsApp 2025-09-12 a las 01 43 52_0113cdc3](https://github.com/user-attachments/assets/d21c191c-2af7-49cb-8d71-152c0bc89177)
+![Imagen de WhatsApp 2025-09-12 a las 01 41 35_d6159db1](https://github.com/user-attachments/assets/f1b2ec94-30ea-44d9-90fd-fd1947388468)
+![Imagen de WhatsApp 2025-09-12 a las 01 44 13_b83b1f8e](https://github.com/user-attachments/assets/a8cbd215-f5d3-49cd-bba1-a49646b1abb0)
+
+Codigo para LRpractico 
+![Imagen de WhatsApp 2025-09-12 a las 01 45 42_d4681251](https://github.com/user-attachments/assets/e9f382a0-ace3-4461-919b-fe7325a9f916)
+![Imagen de WhatsApp 2025-09-12 a las 01 46 12_084cfe47](https://github.com/user-attachments/assets/b84b2502-31cc-462b-8761-a4d882d8b319)
 
 
 
