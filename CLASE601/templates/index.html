@@ -1,70 +1,56 @@
-
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Casos de Uso - ML Supervisado</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
+<body class="main-page">
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Casos de Uso</a>
+                <ul>
+                    <li><a href="/Salud">Salud</a></li>
+                    <li><a href="/Ciberseguridad">Ciberseguridad</a></li>
+                    <li><a href="/Transporte">Transporte</a></li>
+                    <li><a href="/Retail">Retail</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Regresión Lineal</a>
+                <ul>
+                    <li><a href="/LRConceptos">Conceptos Básicos</a></li>
+                    <li><a href="/LRPractico">Ejercicio Práctico</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-<body>
-    <div class="hero">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>Bienvenidos a Casos de Uso de Machine Learning</h1>
-            <p>Explora los diferentes sectores donde el aprendizaje supervisado está transformando el mundo.</p>
-            
-            <div class="menu">
-                <a href="/Salud" class="btn">
-                    <img src="{{ url_for('static', filename='salud.jpg') }}" alt="Salud">
-                    <span>Salud</span>
-                </a>
-                <a href="/Ciberseguridad" class="btn">
-                    <img src="{{ url_for('static', filename='Ciberseguridad.png') }}" alt="Ciberseguridad">
-                    <span>Ciberseguridad</span>
-                </a>
-                <a href="/Retail" class="btn">
-                    <img src="{{ url_for('static', filename='Retail.png') }}" alt="Retail">
-                    <span>Retail</span>
-                </a>
-                <a href="/Transporte" class="btn">
-                    <img src="{{ url_for('static', filename='transporte.png') }}" alt="Transporte">
-                    <span>Transporte</span>
-                </a>
-            </div>
-        </div>
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h1>Bienvenido al menú principal</h1>
+
+        <section class="intro">
+            <h2>Introducción</h2>
+            <p>
+                Este espacio reúne diferentes casos de uso y ejemplos prácticos de <b>aprendizaje automático</b> 
+                aplicados en distintos sectores como salud, transporte, retail y ciberseguridad.  
+                También encontrarás un módulo dedicado a la <b>regresión lineal</b> con teoría y práctica.
+            </p>
+        </section>
+
+        <section class="objectives">
+            <h2>Objetivos</h2>
+            <ul>
+                <li>Explorar aplicaciones reales del aprendizaje automático.</li>
+                <li>Comprender los conceptos fundamentales de la regresión lineal.</li>
+                <li>Aplicar modelos predictivos en un ejercicio práctico.</li>
+                <li>Desarrollar intuición para la interpretación de resultados.</li>
+            </ul>
+        </section>
     </div>
 </body>
-
-<!-- Sección de Referencias -->
-<div class="references">
-  <h3>📖 Referencias</h3>
-  <p>Springer. (2024), <i>Redes Neuronales Convolucionales</i><br>
-     <a href="https://link.springer.com/article/10.1007/s11831-023-09899-9" target="_blank">
-       https://link.springer.com/article/10.1007/s11831-023-09899-9
-     </a>
-  </p>
-  <p>La verdad Hidalgo. (2025), <i>Aplicaciones machine Learning</i><br>
-     <a href="https://laverdadhidalgo.com/inteligencia-artificial-en-accion-parte-4/" target="_blank">
-       https://laverdadhidalgo.com/inteligencia-artificial-en-accion-parte-4/
-     </a>
-  </p>
-  <p>IBM. (2023), <i>Máquinas de soporte</i><br>
-     <a href="https://www.ibm.com/es-es/think/topics/support-vector-machine" target="_blank">
-       https://www.ibm.com/es-es/think/topics/support-vector-machine
-     </a>
-  </p>
-  <p>Darktrace. (2025), <i>Darktrace</i><br>
-     <a href="https://www.darktrace.com/es" target="_blank">
-       https://www.darktrace.com/es
-     </a>
-  </p>
-  <p>Digitalent. (2025), <i>Casos de uso</i><br>
-     <a href="https://www.isdi.education/es/blog/walmart-ia-personalizacion-inventario" target="_blank">
-       https://www.isdi.education/es/blog/walmart-ia-personalizacion-inventario
-     </a>
-  </p>
-</div>
-
-
 </html>
