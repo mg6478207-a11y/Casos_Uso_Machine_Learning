@@ -24,7 +24,14 @@ Si tomo como ejemplo de volumen 15 y desidad 3 y doy click en predecir me muestr
 <img width="1366" height="693" alt="image" src="https://github.com/user-attachments/assets/64a93b18-3ebd-47cd-ad22-f38e7fab7ac9" />
 
 
+# **Codigos Usados**
 
+ Codigo de app.py dentro de Visual Studio
+![Imagen de WhatsApp 2025-09-12 a las 01 38 55_feeb2ff1](https://github.com/user-attachments/assets/0ca2ee13-25cd-41d1-9e86-2b022f3a13a7)
+
+Codigo de LRModel.py dentro de Visual Studio
+![Imagen de WhatsApp 2025-09-12 a las 01 39 35_75746655](https://github.com/user-attachments/assets/ca070c6a-6bd2-4bb3-83c4-2d8250dd19e9)
+![Imagen de WhatsApp 2025-09-12 a las 01 39 53_00d753dd](https://github.com/user-attachments/assets/dfed6879-b3b9-4dfd-bd31-811b86332ae9)
 
 
 
