@@ -44,6 +44,10 @@ Codigo para LRpractico
 ![Imagen de WhatsApp 2025-09-12 a las 01 45 42_d4681251](https://github.com/user-attachments/assets/e9f382a0-ace3-4461-919b-fe7325a9f916)
 ![Imagen de WhatsApp 2025-09-12 a las 01 46 12_084cfe47](https://github.com/user-attachments/assets/b84b2502-31cc-462b-8761-a4d882d8b319)
 
+Interfaz del menu principal con el nuevo menu de regresion logistica
+<img width="1366" height="662" alt="image" src="https://github.com/user-attachments/assets/c54e5a7c-4110-4c8e-99cf-75d5e94d78bd" />
+
+
 
 
 
