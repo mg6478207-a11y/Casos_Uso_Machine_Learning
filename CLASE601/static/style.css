@@ -340,3 +340,40 @@ body.internal-page {
     }
     .lr-actions { justify-content: flex-start; }
 }
+
+
+
+/*-------------------------------------------------------------------*/
+/* =========================
+   Estilos específicos PracticoRL
+   ========================= */
+#practicoRL h2 {
+  color: #0d6efd; /* Azul Bootstrap */
+  font-weight: bold;
+}
+
+#practicoRL .card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease-in-out;
+}
+
+#practicoRL .card:hover {
+  transform: scale(1.02);
+}
+
+#practicoRL .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#practicoRL .table {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#practicoRL .alert {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
