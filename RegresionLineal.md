@@ -49,6 +49,10 @@ Interfaz del menu principal con el nuevo menu de regresion logistica
 Interfaz del submenu de conceptos de regresion logistica.
 ![Imagen de WhatsApp 2025-09-18 a las 21 31 16_43cde1fa](https://github.com/user-attachments/assets/8a728a43-deb6-4d39-b419-33dd45fbc924)
 
+interfaz del sub menu del ejercicio practico de regresion logistica
+![Imagen de WhatsApp 2025-09-18 a las 21 33 19_7792e804](https://github.com/user-attachments/assets/81d61bbb-2f62-4fd6-90be-1f1bc500466c)
+![Imagen de WhatsApp 2025-09-18 a las 21 33 58_5a9d3ea3](https://github.com/user-attachments/assets/4025d16b-a486-49db-98cf-f166da8571bb)
+![Imagen de WhatsApp 2025-09-18 a las 21 34 58_71d18406](https://github.com/user-attachments/assets/6fa841f5-25a3-4ad1-9b9a-a2716ef8bfb0)
 
 
 
