@@ -46,6 +46,9 @@ Codigo para LRpractico
 
 Interfaz del menu principal con el nuevo menu de regresion logistica
 <img width="1366" height="662" alt="image" src="https://github.com/user-attachments/assets/c54e5a7c-4110-4c8e-99cf-75d5e94d78bd" />
+Interfaz del submenu de conceptos de regresion logistica.
+![Imagen de WhatsApp 2025-09-18 a las 21 31 16_43cde1fa](https://github.com/user-attachments/assets/8a728a43-deb6-4d39-b419-33dd45fbc924)
+
 
 
 
