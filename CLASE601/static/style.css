@@ -377,3 +377,111 @@ body.internal-page {
   font-weight: 600;
 }
 
+/*-------------------------------------------------------------------*/
+/* =========================
+   Estilos específicos PracticoRL
+   ========================= */
+#practicoRL h2 {
+  color: #0d6efd; /* Azul Bootstrap */
+  font-weight: bold;
+}
+
+#practicoRL .card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease-in-out;
+}
+
+#practicoRL .card:hover {
+  transform: scale(1.02);
+}
+
+#practicoRL .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#practicoRL .table {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#practicoRL .alert {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ========================= 
+   Estilos específicos AlgPractico
+   ========================= */
+body.alg-practico-page {
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.alg-practico-page .container.section {
+    max-width: 1300px;               /* más ancho que antes */
+    margin: 100px auto 40px;         /* espacio arriba para navbar fija */
+    padding: 20px;
+}
+
+/* Títulos */
+.alg-practico-page h2 {
+    font-weight: bold;
+    color: #0d6efd;
+    text-align: center;
+}
+
+.alg-practico-page p.lead {
+    font-size: 1.1rem;
+    max-width: 950px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+/* Tarjetas generales */
+.alg-practico-page .card {
+    width: 100%;         
+    max-width: 1000px;               /* ahora más largas y anchas */
+    margin: 25px auto;               /* centradas */
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Métrica de exactitud */
+.alg-practico-page .metric-card {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 30px;
+}
+
+/* Imagen de matriz de confusión */
+.alg-practico-page .confusion-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 600px;    /* más grande */
+    width: 100%;         /* ocupa el ancho disponible */
+    height: auto;        /* mantiene proporción */
+}
+
+/* Formulario */
+.alg-practico-page .form-section {
+    margin-top: 40px;
+}
+
+.alg-practico-page form .form-label {
+    font-weight: 600;
+    color: #1565c0;
+}
+
+.alg-practico-page button[type="submit"] {
+    padding: 12px 24px;
+    font-size: 1.15rem;
+    border-radius: 8px;
+}
+
+
+
