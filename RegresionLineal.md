@@ -1,4 +1,4 @@
-# **Regresion Lineal**
+# **Pagina WEb**
 
 El menu principal de mi pagina web
 <img width="1355" height="691" alt="image" src="https://github.com/user-attachments/assets/85abfc89-05d8-48fe-8bb7-b500deb455c5" />
@@ -53,6 +53,12 @@ interfaz del sub menu del ejercicio practico de regresion logistica
 ![Imagen de WhatsApp 2025-09-18 a las 21 33 19_7792e804](https://github.com/user-attachments/assets/81d61bbb-2f62-4fd6-90be-1f1bc500466c)
 ![Imagen de WhatsApp 2025-09-18 a las 21 33 58_5a9d3ea3](https://github.com/user-attachments/assets/4025d16b-a486-49db-98cf-f166da8571bb)
 ![Imagen de WhatsApp 2025-09-18 a las 21 34 58_71d18406](https://github.com/user-attachments/assets/6fa841f5-25a3-4ad1-9b9a-a2716ef8bfb0)
+
+Interfaz del menu princial con el nuevo menu de Algoritmos de clasificación
+<img width="1366" height="691" alt="image" src="https://github.com/user-attachments/assets/135c3bbd-9c22-4125-8581-06d68453958e" />
+
+
+
 
 
 
