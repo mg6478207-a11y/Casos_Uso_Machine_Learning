@@ -60,7 +60,14 @@ Interfaz de submenu de Conceptos de Algoritmos de Clasificación
 ![Imagen de WhatsApp 2025-09-27 a las 17 27 33_bf0a01e7](https://github.com/user-attachments/assets/57a1eeb3-fab6-4533-815e-0243e99753b9)
 Para la creación del mapa usamos la aplicación mindmeister 
 ![Imagen de WhatsApp 2025-09-27 a las 17 27 58_2c4c0ad9](https://github.com/user-attachments/assets/a067932b-9391-4658-b7e9-ad527de9816b)
-
+descripcion de la dataset
+![Imagen de WhatsApp 2025-09-27 a las 17 30 32_47324ed9](https://github.com/user-attachments/assets/38d443c2-113c-4d99-bae5-a7295b11374d)
+el porcentaje de exactitud 
+![Imagen de WhatsApp 2025-09-27 a las 17 32 54_482052a1](https://github.com/user-attachments/assets/75e0406e-730a-4998-8a5c-3f850d8d6897)
+matriz de confusion-algoritmo de clasificacion 
+![Imagen de WhatsApp 2025-09-27 a las 17 33 18_19d38cab](https://github.com/user-attachments/assets/ee6b9326-9c08-4cfa-b096-49119eae0163)
+formulario de prediccion
+![Imagen de WhatsApp 2025-09-27 a las 17 34 10_0e7d0d19](https://github.com/user-attachments/assets/d43055de-c71b-420a-aa73-879540b34a2c)
 
 
 
