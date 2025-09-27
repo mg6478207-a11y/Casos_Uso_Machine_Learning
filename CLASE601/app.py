@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, send_file
 from LRModel import generar_grafico
 import regresionLogistica as RL
+import clasificacion as CLF
 
 app = Flask(__name__)
 
@@ -107,6 +108,57 @@ def PracticoRL():
         informe=_informe_RL
     )
 
+    #-------------------------------------------------------------------------------
+#Menu tipos de algoritmos de clasificacion
+@app.route('/AlgConceptos')
+def AlgConceptosL():
+    return render_template('AlgConceptos.html')
+
+# Entrenamiento inicial al cargar la app
+_data_CLF = CLF.load_data(CLF.DATA_PATH)
+X_train_CLF, X_test_CLF, y_train_CLF, y_test_CLF = CLF.split_xy(_data_CLF)
+_model_CLF = CLF.train_model(X_train_CLF, y_train_CLF)
+_accuracy_CLF, _report_html_CLF, _cm_CLF, _cm_img_path_CLF = CLF.evaluate(_model_CLF, X_test_CLF, y_test_CLF)
+_informe_CLF = CLF.informe_breve()
+
+
+@app.route('/AlgPractico', methods=['GET', 'POST'])
+def AlgPractico():
+    pred_label = None
+    pred_prob = None
+    threshold = request.form.get('threshold', default=0.5, type=float)
+
+    form_vals = {
+        'CapitalInicial': request.form.get('CapitalInicial'),
+        'Experiencia': request.form.get('Experiencia'),
+        'NumSocios': request.form.get('NumSocios'),
+        'AniosOperacion': request.form.get('AniosOperacion'),
+    }
+
+    if request.method == 'POST' and all(form_vals.values()):
+        features = {
+            'CapitalInicial': float(form_vals['CapitalInicial']),
+            'Experiencia': int(form_vals['Experiencia']),
+            'NumSocios': float(form_vals['NumSocios']),
+            'AniosOperacion': float(form_vals['AniosOperacion'])
+        }
+        pred_label, pred_prob = CLF.predict_label(_model_CLF, features, threshold)
+        pred_prob = float(pred_prob)
+
+    return render_template(
+        'AlgPractico.html',
+        accuracy_pct=round(_accuracy_CLF * 100, 2),
+        report_html=_report_html_CLF,
+        cm_img_path=_cm_img_path_CLF,
+        pred_label=pred_label,
+        pred_prob=pred_prob,
+        threshold=threshold,
+        form_vals=form_vals,
+        informe=_informe_CLF
+    )
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
 
