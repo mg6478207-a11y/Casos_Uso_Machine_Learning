@@ -56,6 +56,11 @@ interfaz del sub menu del ejercicio practico de regresion logistica
 
 Interfaz del menu princial con el nuevo menu de Algoritmos de clasificación
 <img width="1366" height="691" alt="image" src="https://github.com/user-attachments/assets/135c3bbd-9c22-4125-8581-06d68453958e" />
+Interfaz de submenu de Conceptos de Algoritmos de Clasificación
+![Imagen de WhatsApp 2025-09-27 a las 17 27 33_bf0a01e7](https://github.com/user-attachments/assets/57a1eeb3-fab6-4533-815e-0243e99753b9)
+Para la creación del mapa usamos la aplicación mindmeister 
+![Imagen de WhatsApp 2025-09-27 a las 17 27 58_2c4c0ad9](https://github.com/user-attachments/assets/a067932b-9391-4658-b7e9-ad527de9816b)
+
 
 
 
