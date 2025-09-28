@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos Básicos - Regresión Logistica</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="internal-page">
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="/">🏠 Menú Principal</a>
+        <a href="/ConceptosRL"> Conceptos Básicos</a>
+        <a href="/PracticoRL"> Ejercicio Practico</a>
+    </div>
+
+<!-- Sección principal -->
+<div class="section">
+    <h2>Conceptos Básicos de la Regresión Logística</h2>
+    <p>
+        La <b>regresión logística</b> es un modelo estadístico utilizado para predecir la <b>probabilidad de que ocurra un evento binario</b> 
+        (por ejemplo: votar/no votar, comprar/no comprar, sobrevivir/no sobrevivir) en función de una o más variables independientes. 
+    </p>
+    <p>
+        A diferencia de la regresión lineal, que predice valores continuos, la regresión logística transforma la salida en una 
+        probabilidad limitada entre <b>0 y 1</b> usando la función <b>sigmoide o logística</b>.
+    </p>
+</div>
+
+<!-- Tarjetas de Conceptos -->
+<div class="cards">
+    <div class="card" onclick="showSection('modelo')">
+        <h3>Modelo y Función Sigmoide</h3>
+        <p>Haz clic para ver más sobre la fórmula del modelo.</p>
+    </div>
+
+    <div class="card" onclick="showSection('interpretacion')">
+        <h3>Interpretación</h3>
+        <p>Haz clic para ver cómo interpretar los coeficientes.</p>
+    </div>
+
+    <div class="card" onclick="showSection('tipos')">
+        <h3>Tipos</h3>
+        <p>Haz clic para ver las variantes de la regresión logística.</p>
+    </div>
+
+    <div class="card" onclick="showSection('diferencias')">
+        <h3>Diferencias con Regresión Lineal</h3>
+        <p>Haz clic para comparar los dos modelos.</p>
+    </div>
+
+    <div class="card" onclick="showSection('casos')">
+        <h3>Casos de Uso</h3>
+        <p>Haz clic para ver aplicaciones reales.</p>
+    </div>
+</div>
+
+<!-- Secciones ocultas -->
+<div id="modelo" class="section-box">
+    <h3>📌 Modelo y Función Sigmoide</h3>
+    <p>
+        El modelo utiliza la <b>función logística o sigmoide</b>, con forma de "S":
+    </p>
+    <p style="text-align:center;">
+        σ(z) = 1 / (1 + e<sup>-z</sup>)
+    </p>
+    <p>
+        donde <i>z = β<sub>0</sub> + β<sub>1</sub>X<sub>1</sub> + ... + β<sub>k</sub>X<sub>k</sub></i>.
+    </p>
+    <p>
+        La transformación <b>logit</b> conecta la probabilidad con los predictores:
+    </p>
+    <p style="text-align:center;">
+        ln(p / (1 - p)) = β<sub>0</sub> + β<sub>1</sub>X<sub>1</sub> + ... + β<sub>k</sub>X<sub>k</sub>
+    </p>
+</div>
+
+<div id="interpretacion" class="section-box">
+    <h3>📌 Interpretación</h3>
+    <p>
+        Los coeficientes se interpretan como cambios en las <b>odds</b> (razón de probabilidades).  
+        Para facilitarlo se usa el <b>Odds Ratio (OR)</b>:
+    </p>
+    <p style="text-align:center;">
+        OR = e<sup>β</sup>
+    </p>
+    <p>
+        - Si OR > 1 → el evento es más probable. <br>
+        - Si OR < 1 → el evento es menos probable. 
+    </p>
+</div>
+
+<div id="tipos" class="section-box">
+    <h3>📌 Tipos</h3>
+    <p><b>Regresión logística binaria:</b> variable dependiente con dos categorías (ej. spam/no spam).</p>
+    <p><b>Regresión logística multinomial:</b> tres o más categorías sin orden (ej. género de película).</p>
+    <p><b>Regresión logística ordinal:</b> tres o más categorías con orden definido (ej. escala de 1 a 5).</p>
+</div>
+
+<div id="diferencias" class="section-box">
+    <h3>📌 Diferencias con Regresión Lineal</h3>
+    <ul>
+        <li><b>Variable dependiente:</b> lineal → continua | logística → categórica.</li>
+        <li><b>Método de estimación:</b> lineal → mínimos cuadrados | logística → máxima verosimilitud.</li>
+        <li><b>Forma de la relación:</b> lineal → recta | logística → curva sigmoide.</li>
+    </ul>
+</div>
+
+<div id="casos" class="section-box">
+    <h3>📌 Casos de Uso</h3>
+    <ul>
+        <li><b>Medicina:</b> predecir si un paciente tiene una enfermedad.</li>
+        <li><b>Finanzas:</b> detección de fraudes en transacciones.</li>
+        <li><b>Recursos Humanos:</b> estimar la probabilidad de que un empleado renuncie.</li>
+        <li><b>Marketing:</b> predecir si un cliente comprará un producto.</li>
+        <li><b>Machine Learning:</b> clasificador supervisado básico y muy usado.</li>
+    </ul>
+</div>
+
+<!-- Referencias -->
+<div class="section">
+    <h3>Referencias</h3>
+    <ul>
+        <li>
+            IBM. (2021, 18 de agosto). <em>¿Qué es la regresión logística?</em> Think. IBM México. 
+            <a href="https://www.ibm.com/mx-es/think/topics/logistic-regression" target="_blank">Leer más</a>
+        </li>
+        <li>
+            Castro, A. (2023). <em>Regresión logística: Conceptos y tipos.</em> RPubs. 
+            <a href="https://rpubs.com/acastro/regresion_logistica" target="_blank">Leer más</a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('.section-box').forEach(sec => sec.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+        window.scrollTo({ top: document.getElementById(id).offsetTop - 50, behavior: 'smooth' });
+    }
+</script>

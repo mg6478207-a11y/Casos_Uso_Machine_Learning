@@ -1,0 +1,173 @@
+<!-- templates/Practico.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio Práctico - Regresión Logística</title>
+
+  <!-- Tu hoja global -->
+  <link rel="stylesheet" href="/static/style.css" />
+  <!-- Mini ajustes de tamaño/colores SOLO para este submenú -->
+  <style>
+    /* Contenedor específico del práctico RL (estrecho y compacto) */
+    #practicoRL.section { max-width: 980px; margin: 70px auto 40px; }
+    #practicoRL h2 { color:#1565c0; margin-bottom: 10px; }
+    #practicoRL p.lead { margin-top: 6px; color:#455a64; }
+
+    /* Tarjetas */
+    #practicoRL .lr-card{ padding:18px; border-left:6px solid #1565c0; }
+    #practicoRL .lr-card h3,#practicoRL .lr-card h5{ color:#1565c0; margin:0 0 10px; }
+
+    /* Grid de métricas (2 columnas) */
+    #practicoRL .grid-2{ display:grid; grid-template-columns: 1fr 1.4fr; gap:16px; }
+    #practicoRL .kpi{ text-align:center; }
+    #practicoRL .kpi .big{ font-size:1.9rem; font-weight:800; color:#0d47a1; margin-top:6px; }
+
+    /* Tabla del reporte: compacta y centrada */
+    #practicoRL .table-wrap{ overflow-x:auto; }
+    #practicoRL table{ width:100%; border-collapse:collapse; font-size:.86rem; }
+    #practicoRL table th,#practicoRL table td{
+      padding:.35rem .55rem; text-align:center; border-bottom:1px solid #eceff1;
+      white-space:nowrap;
+    }
+    #practicoRL table th{ background:#f5f7fb; color:#37474f; font-weight:700; }
+
+    /* Matriz de confusión: tamaño controlado y centrada */
+    #practicoRL .cm-img{ display:block; max-width:520px; width:100%; margin:.25rem auto 0; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.06); }
+
+    /* Formulario: inputs más pequeños */
+    #practicoRL .form-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; }
+    #practicoRL .form-grid .w-2{ grid-column: auto / span 2; }
+    #practicoRL label{ font-weight:700; color:#1565c0; margin-bottom:6px; display:block; text-align:left; }
+    #practicoRL input,#practicoRL select{
+      height:36px; padding:.25rem .5rem; font-size:.95rem; border:1px solid #e0e0e0; border-radius:10px; outline:none;
+    }
+    #practicoRL input:focus,#practicoRL select:focus{ border-color:#1565c0; box-shadow:0 0 0 3px rgba(21,101,192,.15); }
+    #practicoRL .btn-primary{ padding:.55rem 1rem; border-radius:12px; box-shadow:0 6px 16px rgba(21,101,192,.25); }
+
+    /* Resultado */
+    #practicoRL .result h4{ margin:0; }
+    #practicoRL .badge{ font-size:1rem; padding:.45rem .7rem; border-radius:999px; }
+
+    /* Responsive */
+    @media (max-width: 992px){
+      #practicoRL.section{ margin: 80px 10px 30px; }
+      #practicoRL .grid-2{ grid-template-columns: 1fr; }
+      #practicoRL .form-grid{ grid-template-columns: 1fr 1fr; }
+      #practicoRL .form-grid .w-2{ grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px){
+      #practicoRL .form-grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body class="internal-page">
+
+  <!-- Navbar igual a tus otras páginas -->
+  <div class="navbar">
+    <a href="/">🏠 Menú Principal</a>
+    <a href="/ConceptosRL">Conceptos</a>
+    <a href="/PracticoRL">Ejercicio Práctico</a>
+  </div>
+
+  <!-- Contenido -->
+  <div id="practicoRL" class="section">
+    <h2>Ejercicio Práctico — Regresión Logística</h2>
+    <p class="lead">Predicción de <b>fracaso en emprendimientos</b> usando variables de capital, experiencia, socios y años en operación.</p>
+
+    <!-- Descripción del dataset -->
+    <div class="lr-card">
+      <h3>Descripción del dataset</h3>
+      <ul style="text-align:left; margin: 0 0 6px 18px;">
+        <li><strong>CapitalInicial</strong> (numérica)</li>
+        <li><strong>Experiencia</strong> (categórica: <em>Baja</em>=0, <em>Media</em>=1, <em>Alta</em>=2)</li>
+        <li><strong>NumSocios</strong> (numérica)</li>
+        <li><strong>AniosOperacion</strong> (numérica)</li>
+      </ul>
+      <p style="margin:0; color:#455a64;">
+        Objetivo: <strong>Fracaso</strong> (1 = “Sí”, 0 = “No”). Clase positiva: <strong>1 (“Sí”)</strong>.
+      </p>
+    </div>
+
+    <!-- Métricas -->
+    <div class="grid-2">
+      <div class="lr-card kpi">
+        <h5>Exactitud (accuracy)</h5>
+        <div class="big">{{ accuracy_pct }}%</div>
+      </div>
+
+      <div class="lr-card">
+        <h5>Reporte de Clasificación</h5>
+        <div class="table-wrap">
+          {{ report_html|safe }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Matriz de confusión -->
+    <div class="lr-card">
+      <h5>Matriz de Confusión</h5>
+      <p class="text-muted" style="margin-top:-2px;">Filas = Reales (0/1), Columnas = Predichos (0/1)</p>
+      <img src="{{ cm_img_path }}" class="cm-img" alt="Matriz de confusión">
+    </div>
+
+    <!-- Formulario de predicción -->
+    <div class="lr-card">
+      <h5>Formulario de Predicción</h5>
+      <form method="post" action="/PracticoRL" class="form-grid" style="text-align:left;">
+        <div>
+          <label for="capital">Capital inicial</label>
+          <input id="capital" type="number" step="0.01" min="0" name="CapitalInicial" placeholder="Ej. 80000" value="{{ form_vals.CapitalInicial or '' }}" required>
+        </div>
+
+        <div>
+          <label for="experiencia">Experiencia del fundador</label>
+          <select id="experiencia" name="Experiencia" required>
+            <option value="">Seleccione…</option>
+            <option value="Baja"  {{ 'selected' if form_vals.Experiencia=='Baja'  else '' }}>Baja</option>
+            <option value="Media" {{ 'selected' if form_vals.Experiencia=='Media' else '' }}>Media</option>
+            <option value="Alta"  {{ 'selected' if form_vals.Experiencia=='Alta'  else '' }}>Alta</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="socios">Número de socios</label>
+          <input id="socios" type="number" step="1" min="0" name="NumSocios" placeholder="Ej. 3" value="{{ form_vals.NumSocios or '' }}" required>
+        </div>
+
+        <div>
+          <label for="anios">Años de operación</label>
+          <input id="anios" type="number" step="1" min="0" name="AniosOperacion" placeholder="Ej. 2" value="{{ form_vals.AniosOperacion or '' }}" required>
+        </div>
+
+        <div class="w-2">
+          <label for="threshold">Umbral (threshold)</label>
+          <input id="threshold" type="number" step="0.01" min="0" max="1" name="threshold" value="{{ threshold or 0.5 }}">
+          <small class="form-text">Por defecto 0.5 (si priorizas detectar “Sí”, baja el valor).</small>
+        </div>
+
+        <div style="display:flex; align-items:end;">
+          <button type="submit" class="lr-btn btn-primary">Predecir</button>
+        </div>
+      </form>
+
+      {% if pred_label is not none %}
+      <hr style="margin:16px 0;">
+      <div class="result" style="text-align:left;">
+        <h4>Predicción:
+          <span class="badge {{ 'bg-danger' if pred_label=='Sí' else 'bg-success' }}">{{ pred_label }}</span>
+        </h4>
+        <p style="margin:0;">Probabilidad (clase “Sí”): <strong>{{ pred_prob }}</strong></p>
+      </div>
+      {% endif %}
+    </div>
+
+    <div style="max-width:980px; margin:20px auto 0; color:#607d8b;">
+      <small>{{ informe }}</small>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning en Transporte</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="internal-page">
+
+  <!-- Barra de navegación -->
+  <div class="navbar">
+    <a href="/">🏠 Menú Principal</a>
+    <a href="/Salud">🩺 Salud</a>
+    <a href="/Ciberseguridad">🔒 Ciberseguridad</a>
+    <a href="/Retail">🛒 Retail</a>
+    <a href="/Transporte">🚚 Transporte</a>
+  </div>
+
+  <!-- Sección principal -->
+  <div class="section">
+    <h2>Machine Learning en Transporte</h2>
+    <p>
+        El transporte es un sector clave para la economía, pero enfrenta problemas 
+        como congestión vehicular, altos costos logísticos, accidentes de tráfico 
+        y contaminación ambiental. Las empresas buscan nuevas formas de optimizar 
+        rutas de entrega, reducir riesgos y aumentar la eficiencia, mientras que 
+        gobiernos y fabricantes exploran tecnologías para mejorar la movilidad urbana 
+        y la seguridad vial.
+    </p>
+
+    <!-- Tarjetas que despliegan info -->
+    <div class="cards">
+      <div class="card" onclick="showSection('algoritmos')">
+        <img src="/static/algoritmoS.png" alt="Algoritmos">
+        <h3>Algoritmos</h3>
+        <p>Haz clic para ver más sobre los algoritmos aplicados en Transporte.</p>
+      </div>
+
+      <div class="card" onclick="showSection('beneficios')">
+        <img src="/static/beneficiosS.png" alt="Beneficios">
+        <h3>Beneficios</h3>
+        <p>Descubre cómo el Machine Learning mejora la Transporte.</p>
+      </div>
+
+      <div class="card" onclick="showSection('ejemplos')">
+        <img src="/static/ejemploS.png" alt="Ejemplos">
+        <h3>Ejemplos</h3>
+        <p>Conoce casos reales de aplicación en el sector Transporte.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secciones ocultas -->
+  <div id="algoritmos" class="section-box">
+  <h3>🔹 Algoritmos en Transporte</h3>
+  <p>
+    Los principales algoritmos utilizados en este campo son:
+    <ul>
+      <li>Optimización de Rutas (Dijkstra, A combinados con ML): permiten encontrar caminos más rápidos considerando tráfico en tiempo real.</li>
+      <li>Redes Neuronales Predictivas: anticipan fallas mecánicas en vehículos para aplicar mantenimiento preventivo.</li>
+      <li>Deep Learning en Visión por Computadora: impulsa el desarrollo de vehículos autónomos mediante reconocimiento de señales de tránsito y detección de obstáculos.</li>
+      <li>Modelos Predictivos: estiman la demanda de transporte en ciudades para mejorar la planificación.</li>
+    </ul>
+  </p>
+    </div>
+
+    <div id="beneficios" class="section-box">
+    <h3>🌟 Beneficios</h3>
+    <p>
+        La implementación del Machine Learning en Transporte ofrece múltiples beneficios:
+        <ul>
+        <li>Reducción de costos logísticos y tiempos de entrega más cortos.</li>
+        <li>Disminución de accidentes gracias a sistemas avanzados de asistencia al conductor (ADAS).</li>
+        <li>Menor consumo de combustible y reducción de emisiones contaminantes.</li>
+        <li>Experiencia de viaje más segura y fluida tanto en transporte público como privado.</li>
+        </ul>
+    </p>
+    </div>
+
+    <div id="ejemplos" class="section-box">
+    <h3>📌 Ejemplos</h3>
+    <p>
+        Algunas aplicaciones exitosas del Machine Learning en Transporte son:
+        <ul>
+        <li><b>Uber y Lyft:</b> aplican ML para predecir la demanda, fijar precios dinámicos y optimizar la asignación de conductores.</li>
+        <li><b>Tesla:</b> emplea visión por computadora y redes neuronales profundas en sus sistemas de conducción autónoma.</li>
+        <li><b>DHL y UPS:</b> usan ML para diseñar rutas más eficientes, lo que reduce costos y la huella de carbono.</li>
+        </ul>
+    </p>
+    </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section-box').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo({ top: document.getElementById(id).offsetTop - 50, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

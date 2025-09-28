@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos Básicos - Regresión Lineal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="internal-page">
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="/">🏠 Menú Principal</a>
+        <a href="/LRConceptos"> Conceptos Básicos</a>
+        <a href="/LRPractico"> Ejercicio Practico</a>
+    </div>
+
+    <!-- Sección principal -->
+    <div class="section">
+        <h2>Conceptos Básicos de la Regresión Lineal</h2>
+        <p>
+            El análisis de regresión lineal es una técnica de análisis de datos que se utiliza para 
+            predecir el valor de una variable en función del valor de otra variable. 
+            La variable que se desea predecir se denomina <b>variable dependiente</b>, 
+            mientras que la variable que se utiliza como referencia se conoce como <b>variable independiente</b>.
+        </p>
+        <p>
+            Esta forma de análisis ajusta una línea recta (o un plano en multivariables) 
+            que minimiza la diferencia entre los valores reales observados y los valores predichos por el modelo.
+            El método más usado es el de <b>mínimos cuadrados</b>.
+        </p>
+    </div>
+
+    <!-- Tarjetas de Supuestos -->
+    <div class="cards">
+        <div class="card" onclick="showSection('linealidad')">
+            
+            <h3>Linealidad</h3>
+            <p>Haz clic para ver más sobre este supuesto.</p>
+        </div>
+
+        <div class="card" onclick="showSection('independencia')">
+           
+            <h3>Independencia</h3>
+            <p>Haz clic para ver más sobre este supuesto.</p>
+        </div>
+
+        <div class="card" onclick="showSection('homoscedasticidad')">
+            
+            <h3>Homoscedasticidad</h3>
+            <p>Haz clic para ver más sobre este supuesto.</p>
+        </div>
+
+        <div class="card" onclick="showSection('normalidad')">
+            
+            <h3>Normalidad del error</h3>
+            <p>Haz clic para ver más sobre este supuesto.</p>
+        </div>
+    </div>
+
+    <!-- Secciones ocultas -->
+    <div id="linealidad" class="section-box">
+        <h3>📌 Linealidad</h3>
+        <p>
+            La relación entre las variables independientes y la dependiente debe ser lineal.  
+            Se verifica con gráficos de dispersión o residuos frente a los valores ajustados.  
+            Si no se cumple, el modelo pierde capacidad predictiva.
+        </p>
+    </div>
+
+    <div id="independencia" class="section-box">
+        <h3>📌 Independencia</h3>
+        <p>
+            Los errores no deben estar correlacionados entre sí.  
+            Se comprueba con la prueba de Durbin-Watson.  
+            Si no se cumple, aparece autocorrelación y la inferencia es poco fiable.
+        </p>
+    </div>
+
+    <div id="homoscedasticidad" class="section-box">
+        <h3>📌 Homoscedasticidad</h3>
+        <p>
+            La varianza de los errores debe ser constante para todos los valores de las variables.  
+            Si no se cumple, aparece heterocedasticidad que distorsiona los errores estándar.  
+        </p>
+    </div>
+
+    <div id="normalidad" class="section-box">
+        <h3>📌 Normalidad del error</h3>
+        <p>
+            Los residuos deben seguir una distribución normal con media cero.  
+            Se evalúa con histogramas o pruebas como Shapiro-Wilk.  
+            En muestras grandes, la falta de normalidad tiene menor impacto gracias al TCL.
+        </p>
+    </div>
+
+    <!-- Referencias -->
+    <div class="section">
+        <h3>Referencias</h3>
+        <ul>
+            <li>
+                IBM. (2021, 18 de agosto). <em>¿Qué es la regresión lineal?</em> Think. IBM México. 
+                <a href="https://www.ibm.com/mx-es/think/topics/linear-regression" target="_blank">Leer más</a>
+            </li>
+            <li>
+                Castro, A. (2023). <em>Regresión lineal simple: Supuestos.</em> RPubs. 
+                <a href="https://rpubs.com/acastro/regresion_lineal_supuestos" target="_blank">Leer más</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section-box').forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            window.scrollTo({ top: document.getElementById(id).offsetTop - 50, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

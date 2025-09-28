@@ -1,0 +1,450 @@
+/* ===== Estilos exclusivos del Menú Principal ===== */
+body.main-page {
+    font-family: Arial, sans-serif;
+    background: #c5e1ee;
+    margin: 0;
+    padding: 0;
+}
+.main-content section {
+    background: #ffffffc4;
+    padding: 20px 25px;
+    border-left: 6px solid #1565c0;  /* franja azul */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Ajustes al nav solo en main-page */
+body.main-page nav {
+    background-image: image('static',filename='fondo.jpeg');
+    background: url("/static/fondo.jpeg") no-repeat center center/cover;
+    padding: 10px;
+}
+
+body.main-page nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body.main-page nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+body.main-page nav ul li a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.main-page nav ul li a:hover {
+    background: #d4d3d359;
+}
+
+body.main-page nav ul ul {
+    display: none;
+    position: absolute;
+    background: #333;
+    min-width: 150px;
+    z-index: 1;
+}
+
+body.main-page nav ul ul li {
+    display: block;
+}
+
+body.main-page nav ul li:hover ul {
+    display: block;
+}
+
+/* Contenido central */
+.main-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.main-content h1 {
+    text-align: center;
+    color: #1565c0;
+    margin-bottom: 30px;
+}
+
+.main-content h2 {
+    color: #ff9800;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main-content p, 
+.main-content ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.main-content ul {
+    padding-left: 20px;
+}
+
+/*-----------------------------------------------------------------------------***/
+/*-------------------salud, Transporte, retail y ciberseguridad-----------------------------------------------------***/
+/*-----------------------------------------------------------------------------***/
+body.internal-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f1f8e9);
+    color: #333;
+}
+
+/* Barra de navegación superior */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: image('static',filename='fondo.jpeg');
+    background: url("/static/fondo.jpeg") no-repeat center center/cover;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-shadow: -1px -1px 0 black;
+    text-shadow:  1px -1px 0 black;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffca28;
+}
+
+/* Sección principal */
+.section {
+    text-align: center;
+    margin-top: 50px; /* para que no tape la navbar */
+    padding: 10px;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1565c0;
+}
+
+.section p {
+    font-size: 1.0rem;
+    color: #333;
+     max-width: 1100px;
+     margin:0 auto;
+}
+
+/* Tarjetas (botones clicables) */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #f9f9f9;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Secciones dinámicas */
+.section-box {
+    display: none;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.section-box h3 {
+    color: #1565c0;
+    margin-bottom: 15px;
+}
+/* Sección de referencias (para el menú principal) */
+.references {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.references h3 {
+    color: #1565c0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.references p {
+    margin-bottom: 12px;
+}
+
+.references a {
+    color: #1565c0;
+    text-decoration: none;
+}
+
+.references a:hover {
+    text-decoration: underline;
+}
+/* ===== Estilos específicos de LRPractico (no invasivos) ===== */
+
+.lr-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Formulario en grid: 2 campos + botón */
+.lr-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+.lr-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.lr-input-group label {
+    font-weight: bold;
+    color: #1565c0;
+    margin-bottom: 6px;
+}
+
+.lr-input {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #fff;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.lr-input:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.15);
+}
+
+.lr-actions { display: flex; align-items: end; }
+
+.lr-btn {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #1565c0;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(21,101,192,0.25);
+    transition: transform .05s ease, background .2s ease, box-shadow .2s ease;
+}
+.lr-btn:hover { background: #0f5aa3; }
+.lr-btn:active { transform: translateY(1px); }
+
+/* Resultado */
+.lr-result-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.lr-badge {
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+/* Contenedor de la figura */
+.lr-figure {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.lr-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive: apilar formulario */
+@media (max-width: 900px) {
+    .lr-form {
+        grid-template-columns: 1fr;
+    }
+    .lr-actions { justify-content: flex-start; }
+}
+
+
+
+/*-------------------------------------------------------------------*/
+/* =========================
+   Estilos específicos PracticoRL
+   ========================= */
+#practicoRL h2 {
+  color: #0d6efd; /* Azul Bootstrap */
+  font-weight: bold;
+}
+
+#practicoRL .card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease-in-out;
+}
+
+#practicoRL .card:hover {
+  transform: scale(1.02);
+}
+
+#practicoRL .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#practicoRL .table {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#practicoRL .alert {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ========================= 
+   Estilos específicos AlgPractico
+   ========================= */
+body.alg-practico-page {
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.alg-practico-page .container.section {
+    max-width: 1300px;               /* más ancho que antes */
+    margin: 100px auto 40px;         /* espacio arriba para navbar fija */
+    padding: 20px;
+}
+
+/* Títulos */
+.alg-practico-page h2 {
+    font-weight: bold;
+    color: #0d6efd;
+    text-align: center;
+}
+
+.alg-practico-page p.lead {
+    font-size: 1.1rem;
+    max-width: 950px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+/* Tarjetas generales */
+.alg-practico-page .card {
+    width: 100%;         
+    max-width: 1000px;               /* ahora más largas y anchas */
+    margin: 25px auto;               /* centradas */
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Métrica de exactitud */
+.alg-practico-page .metric-card {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 30px;
+}
+
+/* Imagen de matriz de confusión */
+.alg-practico-page .confusion-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 600px;    /* más grande */
+    width: 100%;         /* ocupa el ancho disponible */
+    height: auto;        /* mantiene proporción */
+}
+
+/* Formulario */
+.alg-practico-page .form-section {
+    margin-top: 40px;
+}
+
+.alg-practico-page form .form-label {
+    font-weight: 600;
+    color: #1565c0;
+}
+
+.alg-practico-page button[type="submit"] {
+    padding: 12px 24px;
+    font-size: 1.15rem;
+    border-radius: 8px;
+}
